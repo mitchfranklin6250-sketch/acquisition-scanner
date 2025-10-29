@@ -19,7 +19,7 @@ class AcquisitionScanner:
         self.headers = {
             'User-Agent': 'Investment Research Bot mitch@example.com'
         }
-        self.alert_threshold = 50  # Minimum score to trigger alert
+        self.alert_threshold = 10  # Minimum score to trigger alert
         
     def send_discord_alert(self, title: str, description: str, color: int = 3447003, 
                           fields: List[Dict[str, Any]] = None):
