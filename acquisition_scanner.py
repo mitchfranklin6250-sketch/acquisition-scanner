@@ -21,7 +21,7 @@ class AcquisitionScanner:
         }
         self.alert_threshold = 5  # Minimum score to trigger alert
         self.alert_threshold = 5
-           print(f"🎯 Alert threshold set to: {self.alert_threshold}")  # Debug line   
+        print(f"🎯 Alert threshold set to: {self.alert_threshold}")  # Debug line   
     def send_discord_alert(self, title: str, description: str, color: int = 3447003, 
                           fields: List[Dict[str, Any]] = None):
         """Send formatted alert to Discord"""
