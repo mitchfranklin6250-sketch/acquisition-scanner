@@ -19,8 +19,9 @@ class AcquisitionScanner:
         self.headers = {
             'User-Agent': 'Investment Research Bot mitch@example.com'
         }
-        self.alert_threshold = 10  # Minimum score to trigger alert
-        
+        self.alert_threshold = 5  # Minimum score to trigger alert
+        self.alert_threshold = 5
+   print(f"🎯 Alert threshold set to: {self.alert_threshold}")  # Debug line   
     def send_discord_alert(self, title: str, description: str, color: int = 3447003, 
                           fields: List[Dict[str, Any]] = None):
         """Send formatted alert to Discord"""
@@ -209,7 +210,7 @@ class AcquisitionScanner:
                         signals.append(signal)
                         print(f"  ✓ Found target: {ticker} (Score: {score})")
                     
-                    time.sleep(0.5)  # Rate limiting
+                    time.sleep(2)  # Rate limiting
                     
                 except Exception as e:
                     print(f"  ✗ Error checking {ticker}: {e}")
@@ -281,7 +282,7 @@ class AcquisitionScanner:
                         signals.append(signal)
                         print(f"  ✓ Anomaly detected: {ticker} (Score: {score})")
                     
-                    time.sleep(0.3)
+                    time.sleep(2)
                     
                 except Exception as e:
                     continue
